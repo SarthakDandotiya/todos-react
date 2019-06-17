@@ -20,7 +20,6 @@ h1 {
 
 .app {
 	background-color: #f9f9f9;
-	/* width: max-content; */
 	width: 80%;
 	max-width: 500px;
 	margin: 0 1em;
@@ -58,7 +57,6 @@ button:hover {
 }
 
 form button {
-	/* min-width: 80px; */
 	width: 100%;
 	font-size: 1rem;
 	border-radius: 0;
@@ -72,7 +70,6 @@ form button {
 }
 form button:active {
 	background: #24458b;
-	/* background: #102b64; */
 }
 
 .todos {
