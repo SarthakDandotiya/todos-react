@@ -1,6 +1,114 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	width: 100%;
+	text-align: center;
+	color: #3c5a99;
+	margin: 1em 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.app {
+	background-color: #f9f9f9;
+	/* width: max-content; */
+	width: 80%;
+	max-width: 500px;
+	margin: 0 1em;
+	padding: 1em;
+}
+
+form {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: wrap;
+	box-sizing: border-box;
+	margin-bottom: 32px;
+}
+
+form input {
+	display: inline-block;
+	width: 100%;
+	min-width: 150px;
+	font-size: 1rem;
+	height: 100%;
+	padding: 8px;
+	margin: 8px;
+	border: solid 1px #bbbbbb;
+}
+
+button {
+	letter-spacing: 1px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+form button {
+	/* min-width: 80px; */
+	width: 100%;
+	font-size: 1rem;
+	border-radius: 0;
+	outline: none;
+	border: none;
+	background-color: #3c5a99;
+	color: white;
+	font-weight: bold;
+	padding: 8px;
+	margin: 8px;
+}
+form button:active {
+	background: #24458b;
+	/* background: #102b64; */
+}
+
+.todos {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.todo {
+	margin: 8px;
+	padding: 8px;
+	background: #ebebeb;
+	white-space: wrap;
+	word-wrap: break-word;
+}
+
+.todo button {
+	font-size: 0.8rem;
+	border-radius: 0;
+	outline: none;
+	border: none;
+	background-color: #e74747;
+	color: white;
+	padding: 2px 4px;
+	margin-top: 8px;
+}
+
+.todo button:active {
+	background-color: #be1f1f;
+}
+
+p {
+	font-size: 1.1em;
+}
+
+.no-todos {
+	margin: 8px;
 }

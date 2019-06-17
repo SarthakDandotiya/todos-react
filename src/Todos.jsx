@@ -6,8 +6,9 @@ const Todos = ({ todos, deleteTodo }) => {
 			{todos.map(todo => {
 				return (
 					<div className='todo' key={todo.id}>
-						<div>{todo.data}</div>
+						<p>{todo.data}</p>
 						<button
+							className='delete'
 							onClick={() => {
 								deleteTodo(todo.id);
 							}}>

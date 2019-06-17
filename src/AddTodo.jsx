@@ -35,19 +35,24 @@ class AddTodo extends Component {
 			id: this.state.id + extention
 		});
 		this.props.addTodo(this.state);
+		this.setState({
+			data: ''
+		});
 	};
 	render() {
 		return (
 			<React.Fragment>
 				<form onSubmit={this.handleSubmit}>
-					<label htmlFor='todo'>Todo:</label>
 					<input
 						type='text'
 						id='todo'
 						onChange={this.handleChange}
+						value={this.state.data || ''}
+						placeholder='Type Something...'
+						autoComplete='off'
 						required
 					/>
-					<button>Add</button>
+					<button className='add'>Add</button>
 				</form>
 			</React.Fragment>
 		);
