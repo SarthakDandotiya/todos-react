@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-
-// This component will be responsible for storing the unsubmitted
-// data and then add it to the parent state on submitting the form
 class AddTodo extends Component {
 	state = {
 		data: null,
@@ -22,7 +19,6 @@ class AddTodo extends Component {
 		let creation = components.join('');
 
 		this.setState({
-			// data: JSON.stringify(e.target.value),
 			data: e.target.value,
 			id: creation
 		});
@@ -30,8 +26,6 @@ class AddTodo extends Component {
 
 	handleSubmit = e => {
 		e.preventDefault();
-		// call function from props
-		// add a check to see if input data isn't empty
 		let extention = Math.random()
 			.toString(36)
 			.replace(/[^a-z]+/g, '')
@@ -40,16 +34,6 @@ class AddTodo extends Component {
 		this.setState({
 			id: this.state.id + extention
 		});
-
-		// if (
-		// 	this.state.data !== null &&
-		// 	this.state.data !== '' &&
-		// 	this.state.id === null &&
-		// 	this.state.id === undefined &&
-		// 	this.state.id === ''
-		// ) {
-		// 	this.props.addTodo(this.state);
-		// }
 		this.props.addTodo(this.state);
 	};
 	render() {

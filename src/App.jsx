@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
 import AddTodo from './AddTodo';
 import Todos from './Todos';
+import './styles.css';
 
 class App extends Component {
-	state = {
-		todos: [
-			{
-				id: 1,
-				data:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, vero!'
-			},
-			{
-				id: 2,
-				data:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, vero!'
-			}
-		]
-	};
+	constructor() {
+		super();
+
+		if (localStorage.rtodos) {
+			this.state = JSON.parse(localStorage.getItem('rtodos'));
+		} else {
+			this.state = {
+				todos: []
+			};
+			localStorage.setItem('rtodos', JSON.stringify(this.state));
+		}
+		console.log('Started');
+	}
+
+	componentDidUpdate() {
+		localStorage.setItem('rtodos', JSON.stringify(this.state));
+	}
 
 	addTodo = todo => {
 		// this.state.todos.values(this.)
@@ -40,7 +44,7 @@ class App extends Component {
 			return (
 				<div>
 					<AddTodo addTodo={this.addTodo} />
-					<hr />
+					<br />
 					<Todos
 						todos={this.state.todos}
 						key={this.state.id}
@@ -52,7 +56,7 @@ class App extends Component {
 			return (
 				<div>
 					<AddTodo addTodo={this.addTodo} />
-					<hr />
+					<br />
 					<div className='no-todos'>
 						<h5>No todos to show.</h5>
 						<p>Please add Todos...</p>

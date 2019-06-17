@@ -7,10 +7,6 @@ const Todos = ({ todos, deleteTodo }) => {
 				return (
 					<div className='todo' key={todo.id}>
 						<div>{todo.data}</div>
-						{/* <textarea name='' id='' cols='30' rows='10'>
-							{todo.data}
-						</textarea> */}
-						{/* <div>{todo.id}</div> */}
 						<button
 							onClick={() => {
 								deleteTodo(todo.id);
